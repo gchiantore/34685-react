@@ -1,10 +1,10 @@
-
-import './App.css';
+import "./App.css";
+import Navigation from "./components/NavBar/NavBar";
 
 function App() {
   return (
     <div className="App">
-      <h1>Hola Mundo</h1>
+      <Navigation />
     </div>
   );
 }

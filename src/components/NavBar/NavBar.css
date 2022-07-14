@@ -1,0 +1,16 @@
+.navHeader{
+    display: flex;
+    height: 30px;
+    align-items: baseline;
+    justify-content: flex-end;
+    padding: 5px;
+    column-gap: 10px;
+}
+a{
+    text-decoration: none;
+}
+.textNavHeader{
+    font-size: 14px;
+    text-decoration: none;
+    color: darkgray;
+}
