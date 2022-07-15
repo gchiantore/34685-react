@@ -1,22 +1,13 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import CartWidget from  "../CartWidget/CartWidget.js"
 import "./NavBar.css";
 
 function Navigation() {
   return (
     <>
-      <div className="navHeader container">
-        <a href="#sigin">
-            <p className="textNavHeader">Ingresar</p>
-        </a>
-        <a href="#login">
-          <p className="textNavHeader">Registrarse</p>
-        </a>
-        <a href="#shop">
-          <i className="textNavHeader fa-solid fa-cart-shopping"></i>
-        </a>
-      </div>
+      <CartWidget contador={4}/>
       <Navbar bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
