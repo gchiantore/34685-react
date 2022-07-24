@@ -15,7 +15,7 @@ const Item = ({ imagen, titulo, precio, stock }) => {
       <Card.Body>
         <Card.Title>{titulo}</Card.Title>
         <Card.Text>{precio}</Card.Text>
-        <ItemCount stock={stock} />
+        <ItemCount stock={stock}/>
         <Button variant="dark" className="buttonSize">
           Agregar al Carrito
         </Button>
