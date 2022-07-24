@@ -1,0 +1,36 @@
+.conContainer{
+    display:flex;
+    max-width: 100%;
+    flex-direction: row;
+    align-items:center ;
+    justify-content: space-between;
+    border:1px solid gray;
+    margin-bottom: 3px;
+}
+
+.btnContador{
+    background-color: black;
+    color:white;
+    width: 30px;
+    text-align: center;
+}
+
+.boton{
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.txtCantidad{
+    background-color: white;
+    color: black;
+    max-width: 70%;
+    text-align: center;
+}
+
+.stk{
+    font-size: smaller;
+    font-weight: 100;
+    margin: 0px;
+    padding: 0px;
+}

@@ -4,11 +4,14 @@
     padding-top: 30px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    column-gap: 10px;
+    justify-content:flex-start;
+    align-items: space-evenly;
+    column-gap: 16px;
+    row-gap: 16px;
     border: 0.5px solid gray;
 }
 

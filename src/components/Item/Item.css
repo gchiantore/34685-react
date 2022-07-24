@@ -1,0 +1,15 @@
+.cardShadow {
+    box-shadow: 7px 6px 122px -55px rgba(0,0,0,0.75);
+}
+
+.buttonSize{
+    width: 100%;
+}
+
+.sale{
+    height: 35px;
+    width: 35px;
+    position:absolute;
+    margin: 5px;
+}
+

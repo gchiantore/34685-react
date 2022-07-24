@@ -20,13 +20,13 @@ function Navigation() {
             />
           </Navbar.Brand>
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#kitesurf">KiteSurf</Nav.Link>
-            <Nav.Link href="#windsurf">WindSurf</Nav.Link>
-            <Nav.Link href="#surf">Surf</Nav.Link>
-            <Nav.Link href="#snowboard">SnowBoard</Nav.Link>
-            <Nav.Link href="#foil">Foil</Nav.Link>
-            <Nav.Link href="#waterwear">WaterWear</Nav.Link>
+            <Nav.Link className="link" href="#home">Home</Nav.Link>
+            <Nav.Link className="link" href="#kitesurf">KiteSurf</Nav.Link>
+            <Nav.Link className="link" href="#windsurf">WindSurf</Nav.Link>
+            <Nav.Link className="link" href="#surf">Surf</Nav.Link>
+            <Nav.Link className="link" href="#snowboard">SnowBoard</Nav.Link>
+            <Nav.Link className="link" href="#foil">Foil</Nav.Link>
+            <Nav.Link className="link" href="#waterwear">WaterWear</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
