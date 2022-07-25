@@ -6,7 +6,7 @@ import "./NavBar.css";
 
 function Navigation() {
   return (
-    <>
+    <div className="fixed">
       <CartWidget contador={4}/>
       <Navbar bg="dark" variant="dark">
         <Container>
@@ -30,7 +30,7 @@ function Navigation() {
           </Nav>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 }
 

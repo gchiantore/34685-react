@@ -1,42 +1,38 @@
+import {useState, useEffect} from "react";
 import Container from "react-bootstrap/Container";
 import "./ItemListContainer.css";
-import Item from "../Item/Item.js";
+import ItemList from "../ItemList/ItemList.js";
+import prod from "../../utils/mock.products.js"
 
 const ItemListContainer = ({ titulo }) => {
+
+  const [listaProductos, setListaProductos]=useState([]);
+
+  const traeProductos = new Promise ((resolve, reject) => {
+    setTimeout (()=>{
+      resolve(prod)
+    },2000)
+  })
+
+  useEffect(()=> {
+    traeProductos
+      .then((respuesta) => {
+        console.log(respuesta)
+        setListaProductos(respuesta)
+      })
+      .catch((error) => {
+        console.log("Error en la llamada")
+      })
+      .finally(()=>{
+        console.log ("seguimos...")
+      })
+  })
+
   return (
     <Container>
       <span className="titulo">{titulo}</span>
       <div className="itemListContainer">
-        <Item
-          imagen="/assets/images/brunotti-pro-x.jpg"
-          titulo="Brunotti Pro X"
-          precio="$ 109.000"
-          stock={10}
-        />
-        <Item
-          imagen="/assets/images/brunotti-shore-bodyboard.jpg"
-          titulo="Brunotti Shore"
-          precio="$ 79.000"
-          stock={20}
-        />
-        <Item
-          imagen="/assets/images/brunotti-harness-gravity.jpg"
-          titulo="Brunotti Gravity"
-          precio="$ 76.000"
-          stock={30}
-        />
-        <Item
-          imagen="/assets/images/brunotti-men-wetsuite.jpg"
-          titulo="Brunotti Wetsuit "
-          precio="$ 66.000"
-          stock={40}
-        />
-        <Item
-          imagen="/assets/images/brunotti-woman-wetsuits.jpg"
-          titulo="Brunotti Wetsuit"
-          precio="$ 64.000"
-          stock={50}
-        />
+        <ItemList dataProducts={listaProductos} />
       </div>
     </Container>
   );

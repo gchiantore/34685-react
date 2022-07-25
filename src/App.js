@@ -1,13 +1,14 @@
 import "./App.css";
 import Navigation from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer.js";
-
+import ElCarousel from "./components/Carousel/Carousel.js";
 
 function App() {
   return (
     <div className="App">
       <Navigation />
-      <ItemListContainer titulo="Ofertas del Dia" />
+{/*       <ElCarousel /> */}
+      <ItemListContainer titulo="Nuestra seleccion del dia" />
     </div>
   );
 }

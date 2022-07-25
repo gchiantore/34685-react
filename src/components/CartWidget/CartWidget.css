@@ -5,6 +5,7 @@
     justify-content: flex-end;
     padding: 9px;
     column-gap: 10px;
+    background-color: white;
 }
 a{
     text-decoration: none;
