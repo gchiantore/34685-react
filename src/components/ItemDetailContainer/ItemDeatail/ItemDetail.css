@@ -1,0 +1,95 @@
+
+.containerDetail{
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 10px;
+    
+}
+
+.containerInfo{
+    width: 30%;
+    height: 750px;
+
+}
+
+.containerImgs{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imgContainer{
+    width: 100%;
+}
+
+.tmbsContainer{
+    width: 130px;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    column-gap: 7px;
+}
+
+.imagen{
+    width: 100%;
+}
+
+.tmbContainer{
+    width: 130px;
+
+}
+
+.tmb{
+    width: 100%;
+}
+
+.sale{
+    height: 65px;
+    width: 65px;
+    position:absolute;
+    margin: 15px;
+}
+.likeBarra{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.onTop{
+    z-index: 1000;
+    padding: 15px;
+    padding-right: 50px;
+    position: absolute;
+}
+
+.likeColor{
+    color: red;
+}
+
+.precio{
+    display: flex;
+    justify-content:space-around;
+    align-items: baseline;
+
+    
+}
+
+.tachado{
+    text-decoration: line-through;
+    color: red;
+    font-weight: 100;
+}
+
+.variante{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    column-gap: 10px;
+}

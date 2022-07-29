@@ -8,7 +8,7 @@ const Item = ({ datos }) => {
   return (
     <Card className="cardShadow" style={{ width: "15rem" }}>
       <div className="likeBarra">
-        <i class="fa-regular fa-heart fa-1x onTop derecha likeColor"></i>
+        <i className="fa-regular fa-heart fa-1x onTop derecha likeColor"></i>
       </div>  
       {onsale? 
       <Card.Img

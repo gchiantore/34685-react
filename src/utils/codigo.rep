@@ -1,3 +1,33 @@
-          <i class="fa-solid fa-truck-fast fa-xs iconoCompra"></i>
-          <i class="fa-solid fa-credit-card fa-xs iconoCompra"></i>
-          <i class="fa-solid fa-shield-halved fa-xs iconoCompra"></i>
+          <i className="fa-solid fa-truck-fast fa-xs iconoCompra"></i>
+          <i className="fa-solid fa-credit-card fa-xs iconoCompra"></i>
+          <i className="fa-solid fa-shield-halved fa-xs iconoCompra"></i>
+
+Fetch a una Api
+
+import * as React from 'react';
+import { useState, useEffect } from 'react';
+import './style.css';
+
+export default function App() {
+  const [pokemon, setPokemon] = useState([]);
+  useEffect(() => {
+    fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+      .then((response) => {
+        return response.json();
+      })
+      .then((datos) => {
+        console.log(datos.results);
+        setPokemon(datos.results);
+      });
+  }, []);
+  return (
+    <div>
+      <h1>Pockemon</h1>
+      {pokemon.map((p, i) => {
+        return <p key={i}>{p.name}</p>;
+      })}
+    </div>
+  );
+}
+
+
