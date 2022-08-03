@@ -1,0 +1,71 @@
+.footer{
+    background-color: #191c1f;
+    padding: 30px;
+    color:white;
+}
+
+.greenProyect{
+    background-color: #38744b;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.greenProyect-lg{
+    background-color: #38744b;
+    color:#bfd2c5 ;
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content: space-between;
+    align-items:center;
+
+}
+.strong{
+    font-weight: 700;
+}
+.imgLogoEco{
+    max-width: 100px;
+}
+
+.texto{
+    width: 400px;
+}
+
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.cuerpoFooter{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content:space-evenly;
+    margin-top: 20px;
+}
+
+.opcionesFooter{
+    max-width: 250px;
+    color: gainsboro;
+}
+
+.opcionesFooter p{
+    margin: 2px;
+}
+
+.linea{
+    background-color: darkgrey;
+    height: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.redes{
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+    justify-content:flex-end;
+}

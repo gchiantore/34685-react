@@ -1,4 +1,12 @@
+.link{
+    text-decoration: none;
+    padding-left: 10px;
+    color: white;
+}
+
+
 .link:hover{
+    text-decoration: none;
     text-decoration: underline;
 }
 

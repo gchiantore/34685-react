@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import CartWidget from  "../CartWidget/CartWidget.js"
 import "./NavBar.css";
+import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
@@ -10,7 +11,7 @@ function Navigation() {
       <CartWidget contador={4}/>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Link to="/">
             <img
               alt=""
               src="/assets/images/fluid01-blanco-transparente-01.png"
@@ -18,15 +19,14 @@ function Navigation() {
               height="60"
               className="d-inline-block align-top"
             />
-          </Navbar.Brand>
+          </Link>
           <Nav className="me-auto">
-            <Nav.Link className="link" href="#home">Home</Nav.Link>
-            <Nav.Link className="link" href="#kitesurf">KiteSurf</Nav.Link>
-            <Nav.Link className="link" href="#windsurf">WindSurf</Nav.Link>
-            <Nav.Link className="link" href="#surf">Surf</Nav.Link>
-            <Nav.Link className="link" href="#snowboard">SnowBoard</Nav.Link>
-            <Nav.Link className="link" href="#foil">Foil</Nav.Link>
-            <Nav.Link className="link" href="#waterwear">WaterWear</Nav.Link>
+            <Link to="/Kitesurf"><p className="link"> KITE </p></Link>
+            <Link to="/Windsurf"><p className="link"> WINDSURF </p></Link>
+            <Link to="/Surf"><p className="link"> SURF </p></Link>
+            <Link to="/Snowboard"><p className="link"> SNOWBOARD </p></Link>
+            <Link to="/Foil"><p className="link"> FOIL </p></Link>
+            <Link to="/Waterwear"><p className="link"> WATERWEAR </p></Link>
           </Nav>
         </Container>
       </Navbar>

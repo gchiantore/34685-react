@@ -1,11 +1,10 @@
 import "./ItemDetail.css";
 import ItemCount from "../../Item/ItemCount/ItemCount.js"
 import Button from "react-bootstrap/Button";
-import { tableSortLabelClasses } from "@mui/material";
 
 
 const ItemDetail=({ datos }) => {
-    const {imagen, titulo, precio, precioAnterior, stock, onsale} = datos;
+    const {imagen, titulo, precio, precioAnterior, stock, onsale, categoria} = datos;
     return (
         <div className="containerDetail">
             <div className="containerImgs">
@@ -29,13 +28,13 @@ const ItemDetail=({ datos }) => {
                         <i className="fa-regular fa-heart fa-2x onTop derecha likeColor"></i>
                     </div>  
                     {onsale? 
-                    <img className="sale" src={"/assets/images/saleIcon.png"} />:``}
+                    <img className="sale" src={"/assets/images/saleIcon.png"} alt="Sale"/>:``}
                     <img className="imagen" src={imagen} alt="" />
                 </div>
 
             </div>
             <div className="containerInfo">
-                <p>Home - WaterWear - {titulo}</p>
+                <p>Home - {categoria} - {titulo}</p>
                 <h1>{titulo}</h1>
                 <hr />
                 <div className="precio">
@@ -58,10 +57,5 @@ const ItemDetail=({ datos }) => {
         </div> 
     );
 }
-
-
-
-
-    
 
 export default ItemDetail;

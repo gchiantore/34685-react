@@ -4,21 +4,24 @@ import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList.js";
 import prod from "../../utils/mock.products.js"
 
-const ItemListContainer = ({ titulo }) => {
+const ItemListContainer = ({ titulo, filtro }) => {
 
   const [listaProductos, setListaProductos]=useState([]);
 
   const traeProductos = new Promise ((resolve, reject) => {
     setTimeout (()=>{
-      resolve(prod)
+      if (filtro===""){
+        resolve(prod)
+      }else{
+        resolve(prod.filter(p => p.categoria===filtro))
+      }  
     },2000)
   })
 
   useEffect(()=> {
     traeProductos
       .then((respuesta) => {
-        console.log(respuesta)
-        setListaProductos(respuesta)
+        setListaProductos(respuesta);
       })
       .catch((error) => {
         console.log("Error en la llamada")
@@ -30,9 +33,9 @@ const ItemListContainer = ({ titulo }) => {
 
   return (
     <Container>
-      <span className="titulo">{titulo}</span>
+      <span className="titulo">{titulo} {filtro}</span>
       <div className="itemListContainer">
-        <ItemList dataProducts={listaProductos} />
+        <ItemList dataProducts={listaProductos}/>
       </div>
     </Container>
   );

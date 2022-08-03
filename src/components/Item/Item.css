@@ -6,7 +6,7 @@
     width: 100%;
 }
 
-.sale{
+.sale-c{
     height: 35px;
     width: 35px;
     position:absolute;
@@ -36,7 +36,7 @@
 }
 
 
-.onTop{
+.onTop-c{
     z-index: 1000;
     padding: 8px;
     position: absolute;
