@@ -1,10 +1,12 @@
 import "./ItemDetail.css";
 import ItemCount from "../../Item/ItemCount/ItemCount.js"
 import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 
 
 const ItemDetail=({ datos }) => {
     const {imagen, titulo, precio, precioAnterior, stock, onsale, categoria} = datos;
+
     return (
         <div className="containerDetail">
             <div className="containerImgs">
@@ -34,7 +36,11 @@ const ItemDetail=({ datos }) => {
 
             </div>
             <div className="containerInfo">
-                <p>Home - {categoria} - {titulo}</p>
+                <div className="linkBack">
+                    <Link to="/"><p className="linkBackText">Home - </p></Link>
+                    <Link to={`/${categoria}`}><p className="linkBackText">{categoria} - </p></Link>
+                    <p className="linkBackText">{titulo}</p>
+                </div>
                 <h1>{titulo}</h1>
                 <hr />
                 <div className="precio">
@@ -48,9 +54,11 @@ const ItemDetail=({ datos }) => {
                 <h4>Cuantos vas a llevar?</h4>
                 <div className="comprar">
                     <ItemCount stock={stock}/>
-                    <Button variant="dark" className="buttonSize">
-                        Agregar al Carrito
-                    </Button>
+                    <Link to="/Cart">
+                        <Button variant="dark" className="buttonSize">
+                            Agregar al Carrito
+                        </Button>
+                    </Link>    
                 </div>
                 <hr />
             </div>

@@ -93,3 +93,15 @@
     justify-content: flex-start;
     column-gap: 10px;
 }
+
+.linkBack{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+
+.linkBackText{
+    text-decoration: none;
+    color:gray;
+}

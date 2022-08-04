@@ -4,7 +4,7 @@ import "./ItemCount.css";
 const ItemCount = ({ stock }) => {
   const [cantidad, setCantidad] = useState(1);
 
-  function onAdd(signo) {
+  function incDec(signo) {
     if (signo === "-") {
       if (cantidad > 1) {
         setCantidad(cantidad - 1);
@@ -21,13 +21,13 @@ const ItemCount = ({ stock }) => {
       <p className="stk">Stock :{stock}</p>
       <div className="conContainer">
         <div className="btnContador">
-          <button onClick={() => onAdd("-")} className="boton">
+          <button onClick={() => incDec("-")} className="boton">
             -
           </button>
         </div>
         <div className="txtCantidad">{cantidad}</div>
         <div className="btnContador">
-          <button onClick={() => onAdd("+")} className="boton">
+          <button onClick={() => incDec("+")} className="boton">
             +
           </button>
         </div>
