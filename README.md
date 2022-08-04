@@ -4,6 +4,13 @@
 
 ![image](https://github.com/gchiantore/34685-react/blob/master/public/assets/gif/navegacion.gif)
 
+![image](https://github.com/ZhengYaWei1992/ZWProgressView/blob/master/Untitled3.gif)
+Explicación
+https://github.com/ZhengYaWei1992/ZWProgressView/blob/master/Untitled3.gif
+ Esta URL de enlace es la URL de enlace que se muestra en github después de cargar la imagen gif.
+
+
+
 
 Este Proyecto fue creado con [Create React App](https://github.com/facebook/create-react-app).
 
