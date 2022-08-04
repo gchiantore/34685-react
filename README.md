@@ -1,5 +1,10 @@
 # Fluid Board - Online Store
 
+
+
+![image](https://github.com/gchiantore/34685-react/blob/master/public/assets/gif/navegacion.gif)
+
+
 Este Proyecto fue creado con [Create React App](https://github.com/facebook/create-react-app).
 
 Fluid es una tienda de productos de deportes extremos tales como windsur, kitesuft, snowboard, y todo lo relacionado a la indumentaria tecnica para parcticarlos. Nace con la necesidad de acercar la tienda fisica a los potenciales clientes en todas partes del pais. 
