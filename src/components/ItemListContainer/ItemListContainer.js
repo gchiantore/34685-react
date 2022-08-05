@@ -29,7 +29,7 @@ const ItemListContainer = ({ titulo, filtro }) => {
       .finally(()=>{
         console.log ("seguimos...")
       })
-  })
+  },[filtro])
 
   return (
     <Container>

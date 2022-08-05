@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock }) => {
+const ItemCount = ({ stock, quantitySelected }) => {
   const [cantidad, setCantidad] = useState(1);
+  
 
   function incDec(signo) {
     if (signo === "-") {
@@ -16,8 +18,13 @@ const ItemCount = ({ stock }) => {
     }
   }
 
+  function onAdd(){
+    quantitySelected(cantidad)
+  }
+
   return (
     <>
+      <h4>Cuantos vas a llevar?</h4>
       <p className="stk">Stock :{stock}</p>
       <div className="conContainer">
         <div className="btnContador">
@@ -31,7 +38,11 @@ const ItemCount = ({ stock }) => {
             +
           </button>
         </div>
+          
       </div>
+      <Button onClick={onAdd} variant="dark" className="buttonSize">
+          Agregar al Carrito
+      </Button>
     </>
   );
 };

@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./ItemDetail.css";
 import ItemCount from "../../Item/ItemCount/ItemCount.js"
 import Button from "react-bootstrap/Button";
@@ -6,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ItemDetail=({ datos }) => {
     const {imagen, titulo, precio, precioAnterior, stock, onsale, categoria} = datos;
-
+    const [quantitySelected, setQuantitySelected]=useState(0);
     return (
         <div className="containerDetail">
             <div className="containerImgs">
@@ -51,14 +52,14 @@ const ItemDetail=({ datos }) => {
                 <h4>Descripcion del Producto</h4>
                 <p>{titulo}, es ideal para pasarlo genial en la playa, disfrutando de las olas, su fabricacion de foam recubierta de capas de goma eva resistente hacen que puedas gozar de la mejor diversion sin preocuparte por dañar al producto.</p>
                 <hr />
-                <h4>Cuantos vas a llevar?</h4>
                 <div className="comprar">
-                    <ItemCount stock={stock}/>
-                    <Link to="/Cart">
-                        <Button variant="dark" className="buttonSize">
-                            Agregar al Carrito
-                        </Button>
-                    </Link>    
+                    {
+                    quantitySelected>0?
+                                <Link to="/Cart">
+                                    <Button variant="dark" className="buttonSize">Terminar Compra</Button>
+                                </Link>: 
+                                <ItemCount stock={stock} quantitySelected={setQuantitySelected}/>
+                    }
                 </div>
                 <hr />
             </div>
