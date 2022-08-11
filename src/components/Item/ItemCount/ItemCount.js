@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import { React, useState, useContext } from "react";
+import { CartContext } from "../../../context/CartContext/CartContext.js";
 import Button from "react-bootstrap/Button";
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, quantitySelected }) => {
+const ItemCount = ({ stock, quantitySelected, producto }) => {
   const [cantidad, setCantidad] = useState(1);
-  
+
+  const { addToCart, cart } = useContext(CartContext);
 
   function incDec(signo) {
     if (signo === "-") {
@@ -18,8 +20,12 @@ const ItemCount = ({ stock, quantitySelected }) => {
     }
   }
 
-  function onAdd(){
-    quantitySelected(cantidad)
+  function onAdd() {
+    quantitySelected(cantidad);
+    console.log("Producto desde itemCount: ", producto);
+    console.log("cantidad desde itemCount: ", cantidad);
+    addToCart({ ...producto, cantidad });
+    console.log("Cart desde ItemCount", cart);
   }
 
   return (
@@ -38,10 +44,9 @@ const ItemCount = ({ stock, quantitySelected }) => {
             +
           </button>
         </div>
-          
       </div>
       <Button onClick={onAdd} variant="dark" className="buttonSize">
-          Agregar al Carrito
+        Agregar al Carrito
       </Button>
     </>
   );

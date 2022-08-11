@@ -1,0 +1,92 @@
+.item{
+    max-width: 370px;
+    min-width: 370px;
+    padding: 3px;
+    border-bottom: 1px solid gray;
+    margin-top: 10px;
+    display:flex;
+    column-gap: 3px;
+    justify-content: flex-start;
+
+}
+
+.tituloCarrito{
+    border-bottom: 1px solid gray;
+    margin-bottom: 10px;
+
+}
+
+.itemImg{
+    width: 80px;
+}
+
+.itemConDesc{
+    width: 180px;
+    display: flex;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.itemDesc{
+    font-size:16px;
+    font-weight: 300;
+    padding-left: 5px;
+}
+
+.itemConCant{
+    width: 100%;
+    text-align: left;
+}
+
+.itemCant{
+    font-size:20px;
+    font-weight: 600;
+    text-align: end;
+    padding-right: 5px;
+    padding-top:10px;
+}
+
+.itemConDel{
+    width: 100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: flex-end;
+}
+
+.itemDel{
+    text-align:right;
+}
+
+.itemDescText{
+    width: 100%;
+}
+
+.itemDescWidge{
+    width: 50%;
+}
+
+.itemConPrec{
+    width: 110px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.totalCarrito{
+    max-width: 370px;
+    min-width: 370px;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display:flex;
+    column-gap: 3px;
+    justify-content: flex-end;
+    text-align: end;
+}
+
+.importeTotal{
+    float:right;
+}

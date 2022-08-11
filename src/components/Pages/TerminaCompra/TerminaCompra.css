@@ -1,0 +1,16 @@
+.mensajeCompra{
+    margin:15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap:30px;
+    flex-direction: column;
+    padding: 5px;
+
+}
+
+.textoMensajeCompra{
+    font-size: 48px;
+    font-weight: 100;
+    text-align: center;
+}

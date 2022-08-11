@@ -1,6 +1,9 @@
 import "./CartWidget.css";
+import "../showCart/ShowCart.js"
+import ShowCart from "../showCart/ShowCart.js";
 
 const CartWidget = ({contador})=>{
+
     return(
         <div className="navHeader container">
             <a href="#sigin">
@@ -9,10 +12,7 @@ const CartWidget = ({contador})=>{
             <a href="#login">
                 <p className="textNavHeader">Registrarse</p>
             </a>
-            <a href="#shop">
-                <i className="textNavHeader fa-solid fa-cart-shopping fa-xl"></i>
-            </a>
-            <span className="top-20 start-100 translate-middle badge rounded-pill bg-primary">{contador}</span>
+            <ShowCart contador={contador}/>
         </div>
     )
 }
