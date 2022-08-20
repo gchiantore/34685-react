@@ -13,7 +13,7 @@ const Checkout = () => {
     <>
       <div className="container">
         <div className="mensajeCompra">
-          <i class="fa-regular fa-face-frown fa-7x"></i>
+          <i className="fa-regular fa-face-frown fa-7x"></i>
           <p className="textoMensajeCompra">Ups..!!</p>
           <p className="textoMensajeCompra">
             El carrito esta vacio!, tal vez te interese chusmear algunos de
@@ -28,7 +28,7 @@ const Checkout = () => {
     <>
       <div className="container">
         <div className="mensajeCompra">
-          <i class="fa-regular fa-face-grin-tongue-wink fa-7x"></i>
+          <i className="fa-regular fa-face-grin-tongue-wink fa-7x"></i>
           <p className="textoMensajeCompra">Genial !!!</p>
           <p className="textoMensajeCompra">
             Es verdad, no podes comprar la felicidad, pero podes comprarte este
@@ -50,10 +50,10 @@ const Checkout = () => {
           <tbody>
             {cart.map((p) => {
               return (
-                <tr>
+                <tr key={p.id}>
                   <td>
                     <div className="itemNc">
-                      <img className="itemImgC" src={p.imagen} alt="" />
+                      <img className="itemImgC" src={`/assets/images/${p.imagen}`} alt="" />
                       <div className="contenedorDescrip">
                         <p className="tituloDesc">{p.titulo}</p>
                         <p>{p.precio}</p>
@@ -68,7 +68,7 @@ const Checkout = () => {
                   <td>
                     <div className="contenedorImporte">
                       <p className="tituloImporte">
-                        {parseInt(p.cantidad) * parseFloat(p.precio.slice(2))}
+                        {(p.cantidad) * (p.precio)}
                       </p>
                     </div>
                   </td>

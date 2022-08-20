@@ -29,7 +29,7 @@ const CartProvider = ({ children }) => {
     setContador(contador + product.cantidad);
     setTotalCarrito(
       totalCarrito +
-        parseInt(product.cantidad) * parseFloat(product.precio.slice(2))
+        parseInt(product.cantidad) * (product.precio)
     );
   };
 
@@ -42,7 +42,7 @@ const CartProvider = ({ children }) => {
   const removeFromCart = (id) => {
     const prod = cart.find((product) => product.id === id);
     setTotalCarrito(
-      totalCarrito - parseInt(prod.cantidad) * parseFloat(prod.precio.slice(2))
+      totalCarrito - (prod.cantidad) * (prod.precio)
     );
     setContador(contador - prod.cantidad);
     const newCart = cart.filter((product) => product.id !== id);

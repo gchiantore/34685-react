@@ -13,16 +13,16 @@ const ItemDetail = ({ datos }) => {
       <div className="containerImgs">
         <div className="tmbsContainer">
           <div className="tmbContainer">
-            <img className="tmb" src={imagen} alt="" />
+            <img className="tmb" src={`/assets/images/${imagen}`} alt="" />
           </div>
           <div className="tmbContainer">
-            <img className="tmb" src={imagen} alt="" />
+            <img className="tmb" src={`/assets/images/${imagen}`} alt="" />
           </div>
           <div className="tmbContainer">
-            <img className="tmb" src={imagen} alt="" />
+            <img className="tmb" src={`/assets/images/${imagen}`} alt="" />
           </div>
           <div className="tmbContainer">
-            <img className="tmb" src={imagen} alt="" />
+            <img className="tmb" src={`/assets/images/${imagen}`} alt="" />
           </div>
         </div>
         <div className="imgContainer">
@@ -38,7 +38,7 @@ const ItemDetail = ({ datos }) => {
           ) : (
             ``
           )}
-          <img className="imagen" src={imagen} alt="" />
+          <img className="imagen" src={`/assets/images/${imagen}`} alt="" />
         </div>
       </div>
       <div className="containerInfo">

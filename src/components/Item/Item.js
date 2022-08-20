@@ -18,7 +18,7 @@ const Item = ({ datos }) => {
         className="sale-c"
         src={"/assets/images/saleIcon.png"}
       />:``}
-      <Card.Img variant="top" src={imagen} />
+      <Card.Img variant="top" src={`/assets/images/${imagen}`} />
       
       <Card.Body>
         <div className="divisor">

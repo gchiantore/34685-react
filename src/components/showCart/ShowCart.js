@@ -52,7 +52,7 @@ function CartContainer() {
                 return (
                   <div key={p.id} className="item">
                     <div className="itemImg">
-                      <img className="imagen" src={p.imagen} alt="" />
+                      <img className="imagen" src={`/assets/images/${p.imagen}`} alt="" />
                     </div>
                     <div className="itemConDesc">
                       <div className="itemDescText">
@@ -73,7 +73,7 @@ function CartContainer() {
                       </div>
                       <div className="itemConCant">
                         <p className="itemCant">
-                          {parseInt(p.cantidad) * parseFloat(p.precio.slice(2))}
+                          {(p.cantidad) * (p.precio)}
                         </p>
                       </div>
                     </div>

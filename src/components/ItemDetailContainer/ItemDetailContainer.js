@@ -1,19 +1,26 @@
 import { useState, useEffect } from "react";
 import "./ItemDetailContainer.css";
 import ItemDetail from "./ItemDeatail/ItemDetail.js";
-import prod from "../../utils/mock.products.js";
+
+
+import db from "../../firebaseConfig"
+import { doc, getDoc } from "firebase/firestore"
 
 function ItemDetailContainer({ item }) {
   const [producto, setProducto] = useState([]);
 
-  const traeProducto = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(prod.find((p) => p.id === parseInt(item)));
-    }, 1);
-  });
+  const traeProducto = async () => {
+    const docRef = doc(db, 'productos', item)
+    const docSnapshot = await getDoc(docRef)
+    let product = docSnapshot.data()
+    product.id = docSnapshot.id
+    console.log('data con id:', product)
+    return product
+}
+
 
   useEffect(() => {
-    traeProducto
+    traeProducto()
       .then((respuesta) => {
         setProducto(respuesta);
         console.log(producto);
@@ -24,7 +31,7 @@ function ItemDetailContainer({ item }) {
       .finally(() => {
         console.log("seguimos...");
       });
-  }, []);
+  }, [item]);
 
   return (
     <div className="container contenedorVista">
