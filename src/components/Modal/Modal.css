@@ -1,0 +1,31 @@
+.list-products {
+    float: left;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.modal-custom {
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  
+    background: white;
+   /*  width: 90vw;
+    height: 90vh; */
+    box-shadow: 1px 5px 5px #00000047;
+    border-radius: 5px;
+    padding: 20px;
+    overflow: hidden;
+
+}
+.cerrar {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.modal-custom img {
+    width: 100%;
+}

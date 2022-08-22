@@ -10,7 +10,24 @@
 }
 
 .textoMensajeCompra{
-    font-size: 48px;
+    font-size: 28px;
     font-weight: 100;
     text-align: center;
+}
+
+.botonesCompra{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.formRegistro{
+    width: 500px;
+}
+
+.ordenID{
+    font-weight: 600;
+    color: red;
 }

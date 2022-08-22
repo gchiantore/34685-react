@@ -25,17 +25,6 @@ const ItemListContainer = ({ titulo, filtro }) => {
     })
     return productList
   }
-  
-  
-  /* const traeProductos = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (filtro === "") {
-        resolve(prod);
-      } else {
-        resolve(prod.filter((p) => p.categoria === filtro));
-      }
-    }, 1);
-  }); */
 
   useEffect(() => {
       traeProductos()

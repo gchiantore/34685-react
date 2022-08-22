@@ -126,7 +126,6 @@ const Checkout = () => {
               <td>
                 <Link to={`/finalcompra`}>
                   <Button
-                    onClick={() => clear()}
                     className="buttonSize"
                     variant="dark"
                   >
