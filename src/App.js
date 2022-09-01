@@ -9,23 +9,25 @@ import Product from "./components/Pages/Product/Product.js";
 import Cart from "./components/Pages/Cart/Cart.js";
 import CartProvider from "./context/CartContext/CartContext";
 import TerminaCompra from "./components/Pages/TerminaCompra/TerminaCompra";
+import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 function App() {
   return (
     <CartProvider>
       <BrowserRouter>
-        <div className="App">
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/:categoria" element={<Category />} />
-            <Route path="/:categoria/:id" element={<Product />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/finalcompra" element={<TerminaCompra />} />
-            <Route path="/*" element={<Error404 />} />
-          </Routes>
-          <Footer />
-        </div>
+        <ScrollToTop />
+          <div className="App">
+            <Navigation />
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/:categoria" element={<Category />} />
+              <Route path="/:categoria/:id" element={<Product />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="/finalcompra" element={<TerminaCompra />} />
+              <Route path="/*" element={<Error404 />} />
+            </Routes>
+            <Footer />
+          </div>
       </BrowserRouter>
     </CartProvider>
   );

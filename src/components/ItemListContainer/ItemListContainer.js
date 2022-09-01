@@ -4,9 +4,11 @@ import "./ItemListContainer.css";
 import ItemList from "../ItemList/ItemList.js";
 import { collection, getDocs, query, where } from "firebase/firestore"
 import db from "../../firebaseConfig.js"
+import Cargando from "../Cargando/Cargando";
 
 const ItemListContainer = ({ titulo, filtro }) => {
   const [listaProductos, setListaProductos] = useState([]);
+  const [cargando, setCargando] = useState(true);
 
   const traeProductos = async() =>{
     const productCollection = collection(db, 'productos')
@@ -36,18 +38,29 @@ const ItemListContainer = ({ titulo, filtro }) => {
       })
       .finally(() => {
         console.log("seguimos...");
+        setCargando(false)
       }); 
   }, [filtro]);
 
   return (
-    <Container>
-      <span className="titulo">
-        {titulo} {filtro}
-      </span>
-      <div className="itemListContainer">
-        <ItemList dataProducts={listaProductos} />
-      </div>
-    </Container>
+    <>
+    {
+      cargando?
+      <Cargando mensaje='Cargando productos' />
+      :
+      
+      <Container>
+        <span className="titulo">
+          {titulo} {filtro}
+        </span>
+        <div className="itemListContainer">
+          <ItemList dataProducts={listaProductos} />
+        </div>
+      </Container>
+      
+
+    }
+    </>
   );
 };
 

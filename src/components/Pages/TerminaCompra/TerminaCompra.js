@@ -7,6 +7,7 @@ import "../TerminaCompra/TerminaCompra.css"
 import db from "../../../firebaseConfig.js";
 import { collection, addDoc } from 'firebase/firestore'
 
+
 const TerminaCompra = () => {
   const [comprado, setComprado]=useState(0);
   const { totalCarrito,cart, clear } = useContext(CartContext);
@@ -35,7 +36,6 @@ const [datosCliente, setDatosCliente] = useState({
     console.log("order para enviar: ", {...orden, cliente: datosCliente})
     enviaDatos({...orden, cliente: datosCliente})
     clear()
-    setComprado(1)
   }
 
   const manejoCambioForm = (e) => {
@@ -47,6 +47,7 @@ const enviaDatos = async (newOrder) => {
   const orderDoc = await addDoc(collectionOrder, newOrder)
   setOrdenOk(orderDoc.id)
   console.log('ORDEN GENERADA', orderDoc)
+  setComprado(1)
 }
 
   const canceloCompra = () =>{
