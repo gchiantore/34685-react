@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 function CartContainer() {
   const [show, setShow] = useState(false);
-  const [ultimaCategoria, setUltimaCategoria] = useState("");
   const { contador, totalCarrito, removeFromCart, cart, clear } =
     useContext(CartContext);
   const handleClose = () => setShow(false);
