@@ -14,7 +14,6 @@ function ItemDetailContainer({ item }) {
     const docSnapshot = await getDoc(docRef)
     let product = docSnapshot.data()
     product.id = docSnapshot.id
-    console.log('data con id:', product)
     return product
 }
 
@@ -23,13 +22,11 @@ function ItemDetailContainer({ item }) {
     traeProducto()
       .then((respuesta) => {
         setProducto(respuesta);
-        console.log(producto);
       })
       .catch((error) => {
         console.log("Error en la llamada");
       })
       .finally(() => {
-        console.log("seguimos...");
         setCargando(false)
       });
   }, [item]);

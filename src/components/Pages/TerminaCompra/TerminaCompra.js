@@ -33,7 +33,6 @@ const [datosCliente, setDatosCliente] = useState({
 
   const manejoCompra=(e) => {
     e.preventDefault()
-    console.log("order para enviar: ", {...orden, cliente: datosCliente})
     enviaDatos({...orden, cliente: datosCliente})
     clear()
   }
@@ -46,7 +45,6 @@ const enviaDatos = async (newOrder) => {
   const collectionOrder = collection(db, 'ordenes')
   const orderDoc = await addDoc(collectionOrder, newOrder)
   setOrdenOk(orderDoc.id)
-  console.log('ORDEN GENERADA', orderDoc)
   setComprado(1)
 }
 

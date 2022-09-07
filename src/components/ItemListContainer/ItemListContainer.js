@@ -37,7 +37,6 @@ const ItemListContainer = ({ titulo, filtro }) => {
         console.log("Error en la llamada");
       })
       .finally(() => {
-        console.log("seguimos...");
         setCargando(false)
       }); 
   }, [filtro]);

@@ -22,10 +22,7 @@ const ItemCount = ({ stock, quantitySelected, producto }) => {
 
   function onAdd() {
     quantitySelected(cantidad);
-    console.log("Producto desde itemCount: ", producto);
-    console.log("cantidad desde itemCount: ", cantidad);
     addToCart({ ...producto, cantidad });
-    console.log("Cart desde ItemCount", cart);
   }
 
   return (

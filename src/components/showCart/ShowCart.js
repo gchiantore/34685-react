@@ -11,8 +11,6 @@ function CartContainer() {
     useContext(CartContext);
   const handleClose = () => setShow(false);
   const handleShow = () => {
-    console.log("Cart desde ShowCart)", cart);
-    console.log("Contador desde ShowCart", contador);
     setShow(true);
   };
 
